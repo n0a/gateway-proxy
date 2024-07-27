@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  proxygateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${FLASK_PORT}:${FLASK_PORT}" # Flask API
+      - "${PROXY_PORT}:${PROXY_PORT}" # Proxy server
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - FLASK_PORT=${FLASK_PORT}
+      - FLASK_USER=${FLASK_USER}
+      - FLASK_PASS=${FLASK_PASS}
+      - PROXY_PORT=${PROXY_PORT}
+      - HOSTNAME=${HOSTNAME}
+      - BASIC_AUTH=${BASIC_AUTH}
+      - INITIAL_PROXIES=${INITIAL_PROXIES}
+    networks:
+      - proxy_network
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine
+    networks:
+      - proxy_network
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+networks:
+  proxy_network:
+    driver: bridge
+
+volumes:
+  redis_data:

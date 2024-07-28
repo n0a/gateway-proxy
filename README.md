@@ -73,8 +73,7 @@ INITIAL_PROXIES=http://user1:pass@161.0.1.1:8000,http://user2:pass2@46.3.55.108:
 
 1. **Start the Proxy Server:**:
     ```
-    docker-compose --env-file .env up --build
-    docker-compose up -d
+    docker-compose --env-file .env up -d --build
     ```
     This command will start the services in the background (detached mode).
 

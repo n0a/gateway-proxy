@@ -31,7 +31,7 @@ The Gateway Proxy Server is a robust and scalable solution designed to manage an
 1. **Clone the repository**:
 ```
 git clone https://github.com/n0a/gateway-proxy.git
-cd gateway-proxy-server
+cd gateway-proxy
 ```
 2. **Install dependencies**:
 Ensure you have Python installed. Then install the required packages:

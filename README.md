@@ -30,7 +30,7 @@ The Gateway Proxy Server is a robust and scalable solution designed to manage an
 
 1. **Clone the repository**:
 ```
-git clone https://github.com/yourusername/gateway-proxy-server.git
+git clone https://github.com/n0a/gateway-proxy.git
 cd gateway-proxy-server
 ```
 2. **Install dependencies**:
@@ -134,7 +134,6 @@ print(response.json())
 
 ### Future Enhancements
 
-- Enhanced Security: Implement additional security measures, such as rate limiting and API authentication. 
 - Advanced Proxy Selection: Integrate machine learning algorithms to predict the best proxy based on historical data. 
 - Detailed Analytics: Provide more in-depth analytics and reporting on proxy performance and usage.
 

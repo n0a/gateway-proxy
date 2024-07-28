@@ -38,10 +38,15 @@ Ensure you have Python installed. Then install the required packages:
 ```
 pip install -r requirements.txt
 ```
+3. **Run**:
+Don't forget to set up the .env file before running the application. Alternatively, you can set environment variables directly in the docker-compose.yml file.:
+```
+python server.py:
+```
 3. **Configure Redis**:
 Make sure Redis is running on your local machine or adjust the `get_redis_client` function in the code to point to your Redis instance.
 
-Environment Variables
+## Environment Variables
 
 The following environment variables can be set to configure the server:
 

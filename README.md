@@ -39,7 +39,7 @@ Ensure you have Python installed. Then install the required packages:
 pip install -r requirements.txt
 ```
 3. **Run**:
-Don't forget to set up the .env file before running the application. Alternatively, you can set environment variables directly in the docker-compose.yml file.:
+Don't forget to set up the .env file before running the application. Alternatively, you can set environment variables directly in the docker-compose.yml file.
 ```
 python server.py:
 ```
